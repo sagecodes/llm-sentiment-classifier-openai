@@ -10,7 +10,7 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
-def summarize_text(user_prompt, system_prompt=None):
+def get_sentiment(user_prompt, system_prompt=None):
     """Summarize text using OpenAI's GPT-3 API.
 
     Args:
@@ -43,7 +43,7 @@ def llm_response(message):
     # adding more instructions to the system prompt such as few shot learning may improve the model's performance
 
     # Get prompt & response from Summarize function
-    prompt_and_response = summarize_text(message, instructions)
+    prompt_and_response = get_sentiment(message, instructions)
 
     response = prompt_and_response["response"]
 
