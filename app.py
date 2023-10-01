@@ -59,4 +59,6 @@ iface = gr.Interface(
     live=False,
 )
 
-iface.launch(debug=True)
+if __name__ == "__main__":
+
+    iface.launch(debug=True)
